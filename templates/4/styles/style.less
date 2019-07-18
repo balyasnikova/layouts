@@ -1,0 +1,33 @@
+@font-face {
+  font-family: Georgia;
+  src: url("../fonts/9605.ttf");
+}
+
+.respond-to(@device, @content) {
+  & when (@device = xs) {
+    @media all and (max-width: 576px) { @content(); }
+  }
+  & when (@device = sm) {
+    @media all and (min-width: 577px) and (max-width: 767px) { @content(); }
+  }
+  & when (@device = md) {
+    @media all and (min-width: 768px) and (max-width: 991px) { @content(); }
+  }
+  & when (@device = lg) {
+    @media all and (min-width: 992px) and (max-width: 1199px) { @content(); }
+  }
+  & when (@device = xl) {
+    @media all and (min-width: 1200px) and (max-width: 1440px) { @content(); }
+  }
+}
+
+/*.respond-to(lg, {
+  display: none;
+});*/
+
+
+
+
+
+
+
